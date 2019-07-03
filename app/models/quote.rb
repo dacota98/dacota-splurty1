@@ -1,9 +1,2 @@
-class CreateQuotes < ApplicationRecord::Migration[5.0]
-  def change 
-    create_table :quotes do |t|
-      t.string :saying
-      t.string :author
-      t.timestamps
-    end
-  end
+class Quote < ApplicationRecord
 end
