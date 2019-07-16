@@ -11,20 +11,22 @@
   <body>
     <header class="row">
       <div class="col-3">
-        <div class="circle">
-          <br />
-          Funny
-          <br />
-          And
-          <br />
-          Insperational Quotes
-        </div>
+        <%= link_to root_path, class: 'logo' do %>
+          <div class="circle">
+            <br />
+            Funny
+            <br />
+            And
+            <br />
+            Insperational Quotes
+          </div>
+        <% end %>
       </div>
       <div class="col-3 slogan">
         Your source for the funnest and most insperational quotes since 2019
       </div>
       <div class="col-2 links">
-        <%= link_to 'Contribute', '#' %>
+        <%= link_to 'Contribute', new_quote_path %>
       </div>
       <div class="col-2 links">
         <%= link_to 'About', '#' %>
@@ -47,7 +49,7 @@
       <div class="container">
         <div class="row">
           <div class="col-6">
-            <%= link_to "This isn't enough, I need more", "#", class: 'next-quote' %>
+            <%= link_to "This isn't enough, I need more", root_path, class: 'next-quote' %>
           </div>
           <div class="col-6 footer-blurb">
             Proudly created by <a href="[https://dacota-wiliiams-portfolio.netlify.com/]">Dacota Williams</a><br />
