@@ -4,7 +4,6 @@
     <title>Splurty1</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -19,22 +18,44 @@
           And
           <br />
           Insperational Quotes
-          </div>
+        </div>
       </div>
-      <div class="col-4 slogan">
+      <div class="col-3 slogan">
         Your source for the funnest and most insperational quotes since 2019
       </div>
-      <div class="col-5 links">
+      <div class="col-2 links">
         <%= link_to 'Contribute', '#' %>
+      </div>
+      <div class="col-2 links">
         <%= link_to 'About', '#' %>
+      </div>
+      <div class="col-2 links">
+        <%= link_to 'Contact', '#' %>
+      </div>
 
     </header>
 
-<hr />
+    <hr />
 
-<br class="clear"/>
+    <br class="clear"/>
 
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <%= link_to "This isn't enough, I need more", "#", class: 'next-quote' %>
+          </div>
+          <div class="col-6 footer-blurb">
+            Proudly created by <a href="[https://dacota-wiliiams-portfolio.netlify.com/]">[Dacota Williams]</a><br />
+            Want to build your own Splurty Webb App - <a href="https://online.bootcampspot.com">Learn how to code here</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </body>
 </html>
