@@ -23,7 +23,7 @@
         <% end %>
       </div>
       <div class="col-3 slogan">
-        The best qutotes around! Provided to you by the best around...The People!
+        The best qutotes around, provided to you by the best around...The People!
       </div>
       <div class="col-2 links">
         <%= link_to 'Contribute', new_quote_path %>
@@ -42,6 +42,12 @@
     <br class="clear"/>
 
     <div class="container">
+      <% if flash[:error].present? %>
+        <div class="col-10 offset-1 alert alert-danger">
+          <%= flash[:error].html_safe %>
+        </div>
+      <% end %>
+
       <%= yield %>
     </div>
 
